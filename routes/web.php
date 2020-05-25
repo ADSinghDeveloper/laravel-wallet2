@@ -17,11 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
 Auth::routes();
-
-Route::get('/colors', 'ColorController@index')->name('colors');
-Route::get('/color/add', 'ColorController@add')->name('color_add');
-Route::get('/color/edit/{id}', 'ColorController@add')->where('id', '[0-9]+')->name('color_edit');
-Route::post('/color/save', 'ColorController@save')->name('color_save');
-Route::get('/color/del/{id}', 'ColorController@del')->where('id', '[0-9]+')->name('color_del');
-
