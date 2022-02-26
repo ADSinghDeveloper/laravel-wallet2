@@ -33,7 +33,7 @@ class AuthController extends Controller
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()
-            ->json(['data' => $user,'access_token' => $token, 'token_type' => 'Bearer']);
+            ->json(['user' => $user,'access_token' => $token, 'token_type' => 'Bearer']);
     }
 
     public function login(Request $request)
@@ -62,10 +62,44 @@ class AuthController extends Controller
         // $request->user()->currentAccessToken()->delete();
 
         // Revoke a specific token...
-        // $user->tokens()->where('id', $tokenId)->delete();
+        // $request->user()->tokens()->where('id', $tokenId)->delete();
 
-        return [
-            'message' => 'You have successfully logged out and the token was successfully deleted'
-        ];
+        return response()
+            ->json(['success' => 'You have been logged-out successfully.']);
+    }
+
+    /**
+     * Add/Edit to Save account
+     * @param int $id
+     */
+    public function save_auth_profile(Request $request)
+    {
+        // $request->flash();
+        $this->validate($request, [
+            'name' => 'required|string|min:2|max:40',
+        ]);
+
+        if($request->conf_psw != $request->new_psw){
+            return response()
+            ->json(['error' => 'New and Confirm password does not matched. Please try again.']);
+
+        }elseif (\Hash::check($request->curr_psw, $request->user()->password) && $request->user()->id == $request->id) {
+            $profile = $request->user();
+            $profile->name = $request->name;
+            $pswdMsg = '';
+
+            if(!empty($request->new_psw)){
+                $profile->password = \Hash::make($request->new_psw);
+                $pswdMsg = ' password';
+            }
+
+            $profile->save();
+
+            return response()
+            ->json(['error' => '', 'success' => 'Profile'.$pswdMsg.' updated successfully!', 'user' => $request->user()]);
+        }else{
+            return response()
+            ->json(['error' => 'Wrong Password Entered.']);
+        }
     }
 }

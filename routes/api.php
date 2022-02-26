@@ -25,6 +25,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         // return auth()->user();
     });
 
+    Route::patch('save_profile', [AuthController::class, 'save_auth_profile']);
+
     // API route for logout user
     Route::post('logout', [AuthController::class, 'logout']);
 });
