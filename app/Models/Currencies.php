@@ -18,6 +18,6 @@ class Currencies extends Model
      */
     public function accounts()
     {
-        return $this->hasOne('App\Accounts');
+        return $this->hasOne('App\Models\Accounts');
     }
 }

@@ -41,7 +41,7 @@ class Accounts extends Model
      */
     public function color()
     {
-        return $this->belongsTo('App\Colors')->withDefault([
+        return $this->belongsTo('App\Models\Colors')->withDefault([
             'code' => Colors::first()->code,
         ]);
     }
@@ -51,7 +51,7 @@ class Accounts extends Model
      */
     public function currency()
     {
-        return $this->belongsTo('App\Currencies')->withDefault([
+        return $this->belongsTo('App\Models\Currencies')->withDefault([
             'code' => Icons::first()->code,
         ]);
     }
@@ -61,7 +61,7 @@ class Accounts extends Model
      */
     public function transaction()
     {
-        return $this->hasOne('App\Transactions');
+        return $this->hasOne('App\Models\Transactions');
     }
 
     static function currencyAmount(){

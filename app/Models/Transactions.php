@@ -42,7 +42,7 @@ class Transactions extends Model
      */
     public function account()
     {
-        return $this->belongsTo('App\Accounts')->withDefault([
+        return $this->belongsTo('App\Models\Accounts')->withDefault([
             'name' => '-',
         ]);
     }
@@ -52,7 +52,7 @@ class Transactions extends Model
      */
     public function category()
     {
-        return $this->belongsTo('App\Categories')->withDefault([
+        return $this->belongsTo('App\Models\Categories')->withDefault([
             'name' => '-',
         ]);
     }
@@ -62,7 +62,7 @@ class Transactions extends Model
      */
     public function paymentmode()
     {
-        return $this->belongsTo('App\PaymentModes')->withDefault([
+        return $this->belongsTo('App\Models\PaymentModes')->withDefault([
             'name' => '-',
         ]);
     }

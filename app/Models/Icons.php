@@ -25,6 +25,6 @@ class Icons extends Model
      */
     public function categories()
     {
-        return $this->hasOne('App\Categories');
+        return $this->hasOne('App\Models\Categories');
     }
 }

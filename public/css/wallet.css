@@ -1,0 +1,233 @@
+*, .animation-transition-general, .sidebar .sidebar-wrapper > .nav [data-toggle="collapse"] ~ div > ul > li > a span, .sidebar .sidebar-wrapper .user .user-info [data-toggle="collapse"] ~ div > ul > li > a span { transition: all 100ms ease-in; }
+.sidebar .nav p { transition: none; }
+h1,h2,h3, .card-title, .title { font-family: "Roboto", "Helvetica", "Arial", sans-serif; }
+.navbar h1,.navbar h2,.navbar h3,.navbar h4, .navbar .navbar-wrapper a, select, select option { text-transform: uppercase; font-weight: 400; font-size: 1.12rem; }
+a h4 small { color: inherit; }
+.navbar-default,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-text,
+.btn-primary,
+.panel-default > .panel-heading { background: #4285f4; color: #fff; transition: 0.2s all; }
+.panel-default > .panel-heading .badge,
+.navbar-default .navbar-toggle .icon-bar,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover,
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover { background-color: #fff; color: #4285f4; }
+.btn-link { color: #4285f4; }
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover { color: #fff; opacity: 0.8; }
+.colors, .icons { display: inline-block; margin: 10px 14px 10px 0px; position: relative; }
+.color-view, .icons-view { display: inline-block; }
+.icons-view i { font-size: 2.5rem; }
+.icons.form-check .form-check-label { padding-left: 15px; }
+.icons label span.icons-view { position: static; }
+.color-view { margin: 0; border-radius: 10px; color: #fff; padding: 20px; }
+.transactions .categories { width: 60px; }
+.categories .color-view { padding: 10px 10px 8px 10px; }
+form .categories .color-view, .modal .categories .color-view { padding-bottom: 3px; }
+.colors .form-check-input { position: relative; left: -10px; }
+.form-check-inline { display: inline-block; }
+.transc_amt { font-weight: 400; }
+.transaction_name, .transc_amt { font-size: 1.20rem; margin-bottom: 2px; }
+.inc { color: green; }
+.exp, .neg { color: red; }
+.view-link, .clear, *[data-toggle="modal"] { cursor: pointer; }
+select.update_color { padding: 10px; border-radius: 0.2rem; transition: 0.2s all; }
+select.update_color option { background-color: #fff; color: #555; }
+.curr { font-size: 1.25rem; }
+.note { font-style: italic; }
+.payment-note { position: relative; display: inline-block; }
+.payment-note small { padding-left: 18px; }
+.payment-note i { font-size: 1rem; position: absolute; top: 1px; left: 0; }
+.btn { margin-right: 15px; }
+.btn:last-child { margin-right: 0; }
+.btn-fixed { position: fixed; bottom: 20px; right: 20px; z-index: 9; }
+.btn-fixed a.btn { float: right; margin: 0 10px 0 0; }
+.btn-fixed a.btn:first-child { margin: 0; }
+.transaction_name { font-weight: 400; color: #3C4858; }
+.card-body, .alert, .form-control,
+.btn .material-icons, .btn:not(.btn-just-icon):not(.btn-fab) .fa { font-size: 1.12rem;}
+.alert { border-radius: 3px; font-weight: 400; }
+select.form-control:read-only.update_color { background-image: none; }
+.card .card-header-primary .card-icon,
+.card .card-header-primary .card-text,
+.card.bg-primary,
+.card.card-rotate.bg-primary .front,
+.card.card-rotate.bg-primary .back { background: #9c27b0; }
+.card .togglebutton { margin-top: 10px; }
+.type-btn.inc.active, .type-btn.inc:hover, .togglebutton:not(.disabled) label input[type=checkbox]:checked+.toggle { background: green; }
+.type-btn.exp.active, .type-btn.exp:hover, .togglebutton:not(.disabled) label .toggle { background: red; }
+.togglebutton:not(.disabled) label .toggle:after { border-color: red; }
+.togglebutton:not(.disabled) label input[type=checkbox]:checked+.toggle:after { border-color: green }
+.togglebutton.disabled label input[type=checkbox]+.toggle,
+.togglebutton.disabled label input[type=checkbox]+.toggle:after,
+.togglebutton.disabled label input[type=checkbox]:checked+.toggle,
+.togglebutton.disabled label input[type=checkbox]:checked+.toggle:after { background: #495057; border-color: #495057; opacity: 0.5; }
+.togglebutton.disabled > label { pointer-events: none; }
+.togglebutton.disabled .inc, .togglebutton.disabled .exp,
+.filter-block label, .badge.mod, small.badge, .transac #currency { color: #495057; }
+.form-control[disabled], .disabled { opacity: 0.4; cursor: not-allowed !important; border-bottom: none; }
+form button.btn i.material-icons { font-size: 1.8rem; }
+.type-btn.btn.btn-fab i.material-icons, .btn-fixed .btn.btn-fab i.material-icons { font-size: 1.5rem; }
+.btn.btn-primary,
+.btn.btn-primary:focus,
+.btn.btn-primary:active,
+.btn.btn-primary:hover,
+.sidebar[data-color="wallet"] li.active > a,
+.sidebar[data-color="wallet"] li.nav-item:hover > a,
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.card .card-header-primary .card-icon,
+.card .card-header-primary:not(.card-header-icon):not(.card-header-text),
+.card .card-header-primary .card-text,
+.autocomplete-suggestions,
+.dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active,
+.bootstrap-datetimepicker-widget table td.active > div, .bootstrap-datetimepicker-widget table td.active:hover > div,
+.badge, .color-view, .card .card-header-primary:not(.card-header-icon):not(.card-header-text){
+	box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15);
+}
+.card .card-header-primary.card-header-icon { box-shadow: none; }
+.filter-block { border-bottom: 1px solid #ccc; position: relative; }
+.filter a.close { margin-top: 2px; }
+.togglebutton .inc, .togglebutton .exp, .sidebar .nav p, .filter i, .accounts label span, .categories label span  { font-size: 1rem; font-weight: 400; }
+.modal div.modal-dialog { margin-top: 0; top: 10%; }
+.badge { padding: 10px; }
+.filter .badge { padding: 5px 8px; margin: 0 5px 8px 0; }
+/*.filter div:nth-child(2) .badge.simple:first-child { padding-left: 0; }*/
+.filterPopup {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 0 4px 4px;
+    box-shadow: 0 4px 6px 0 rgb(0 0 0 / 20%);
+    margin-right: 10px;
+}
+.filter .badge.simple:first-child { margin-right: 0 }
+.filter small { margin-right: 10px; }
+.badge.simple { box-shadow: none; }
+.alert i.material-icons, .material-icons { font-size: 1.25rem; }
+.card .card-header .card-title .material-icons { font-size: inherit; }
+.modal .card { margin: 0; box-shadow: none; }
+.select-field .select-value { cursor: pointer; margin: 2px 5px 8px 5px; }
+.select-block .select-value { margin: 0; }
+.accounts .select-value span { min-width: 140px; }
+.multiple .select-value { cursor: pointer; margin-top: 0.2rem; margin-right: 0.5rem; }
+.multiple .select-value input{ display: none; }
+div[data-toggle="modal"] > label { vertical-align: top; }
+.select-block, .select-block label { margin: 0; }
+.select-block > *, .select-block p { margin-left: 10px !important; cursor: pointer; }
+.category_name { float: right; margin: 1px 4px 0px 22px; }
+.account_name { margin-top: 4px; }
+tr.view-link:hover { background-color: #f8f8f8; box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2); }
+small { font-size: 0.8rem; }
+.small { opacity: 0.8; }
+.card .card-header .card-title { text-transform: uppercase; margin-bottom: 0; }
+.card .card-header .card-title small { color: #fff; }
+.table-responsive { padding: 0 5px 5px 5px; }
+.sidebar .logo { padding: 10px 8px; }
+.navbar h4 { margin-bottom: 0; }
+.acc { font-size: 13px; font-weight: 500; text-transform: uppercase; }
+.table .td-actions a.btn { padding: 0; }
+.hide { display: none; }
+.material-icons.placeholder { font-family: inherit; }
+.alert i.material-icons { color: #fff; margin-right: 10px; top: 2px; position: relative; }
+.categories .badge i.material-icons { font-size: 1.1rem; position: absolute; left: 12px; }
+.fileinput label { margin-right: 15px; }
+.fileinput-exists .fileinput-new, .fileinput-new .fileinput-exists { display: none; }
+.form-group .btn-file > input[type=file] { z-index: 1; }
+.delimeter input { width: 40px; text-align: center; display: inline-block; }
+.transac #currency, .transac #typeIcon { position: absolute; }
+.transac #currency { bottom: 15px; }
+.transac #typeIcon { top: 15px; cursor: pointer; }
+.transac #currency { left: 45px;}
+.transac i.material-icons { font-size: 2rem; }
+.transac #typeIcon i.type { position: absolute; left: 0; top: 5px; display: none; font-size: 3rem }
+.transac #typeIcon i:not(.type) { text-indent: -9999px; }
+.transac #amount { padding-left: 70px; font-size: 40px; line-height: 45px; }
+div[data-toggle="modal"] input[type="text"] { position: absolute; left: 0; z-index: -1; opacity: 0; }
+.error {
+    text-align: center;
+    height: 60vh;
+    vertical-align: middle;
+    display: table-cell;
+    width: 100vw;
+}
+.filter-field { margin-top: 15px; }
+.close i { float: right; }
+.fix-tr-height.table > tbody > tr > td { padding-top: 20px; padding-bottom: 20px; }
+.badge.filter-badge { color: #fff; border-radius: 4px; }
+.clear.search { position: absolute; right: 0; z-index: 9; top: 7px; }
+.total-amount { font-size: 1.4rem; margin: 10px 0 6px; line-height: 1.6rem; }
+.edit { position: absolute; right: 0; top: 0; z-index: 0; opacity: 0; }
+.editable:hover .edit {  z-index: 9; opacity: 1; }
+.title { border-bottom: 1px solid #ddd; }
+.block { background: #fafafa; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15); }
+.card .card-body + .card-footer { border-top: 1px solid #ddd; }
+.card-stats .card-header.card-header-icon .card-title { margin-bottom: 6px; }
+.card-stats .card-header.card-header-icon i {
+    font-size: 26px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.card .card-body + .card-footer .stats, .card .card-footer .stats { font-size: inherit; font-weight: 400; }
+.text-2 { font-size: 15px; font-weight: 400; background: #eee; }
+.main-panel > .content { padding-top: 10px; }
+.table tr:last-child th, .table tr:last-child td { border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+.padding05 { padding: 0 5px; }
+
+.print .card [class*="card-header-"]:not(.card-header-icon):not(.card-header-text):not(.card-header-image) { margin-top: 0; top: -20px; }
+.print .card .card-body { padding-top: 0; }
+
+.autocomplete-suggestions { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; }
+.autocomplete-suggestion { white-space: nowrap; overflow: hidden; }
+.autocomplete-suggestion, .autocomplete-no-suggestion { padding: 5px;}
+.autocomplete-selected { background: #cccccc; }
+.autocomplete-suggestions strong { font-weight: bold; color: #495057; }
+
+@media (max-width: 991px){
+	.navbar-toggler .icon-bar { background: #fff !important; }
+}
+@media (max-width: 560px){
+	.wrapper:not(.print) .payment-col { display: none; }
+}
+
+/* Theme color - Start */
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active,
+.card .card-header-primary .card-icon,
+.card .card-header-primary .card-text,
+.card .card-header-primary:not(.card-header-icon):not(.card-header-text),
+.card.bg-primary, .card.card-rotate.bg-primary .front, .card.card-rotate.bg-primary .back,
+.sidebar[data-color="wallet"] li.active > a,
+.bootstrap-datetimepicker-widget table td.active > div, .bootstrap-datetimepicker-widget table td.active:hover > div,
+.form-check .form-check-input:checked + .form-check-sign .check,
+.btn.btn-primary, .btn.btn-primary.focus, .btn.btn-primary,
+.btn.btn-primary:focus, .btn.btn-primary.focus, .btn.btn-primary:hover,
+.sidebar[data-color="wallet"] li.nav-item:hover > a, .badge.badge-primary { background: #4284f4; color: #fff;}
+.navbar a, .sidebar li.nav-item:hover > a i { color: #fff; }
+.icons .icons-view i:hover, .icons label.active .icons-view i, .icons.select-block i,
+.btn.btn-primary.btn-link:hover, .btn.btn-primary.btn-link:focus, .btn.btn-primary.btn-link:active,
+.title a small, .title a, a, .btn.btn-primary.btn-link, .sidebar .logo .simple-text, .is-focused [class^='bmd-label'], .is-focused [class*=' bmd-label'] { color: #4284f4; }
+.navbar { background: #4284f4 !important; color: #fff; }
+.form-control, .is-focused .form-control {
+    background-image: linear-gradient(to top, #4284f4 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+}
+.dropdown-menu .dropdown-item.text-danger:hover, .dropdown-menu a.text-danger:hover{ background: red; color: #fff !important; }
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 { line-height: 1em; }
+.table > tbody > tr > td { padding: 8px 8px; }
+.row.block .table.transactions > tbody > tr:first-child > td { border-top: none; }
+.note smalll {
+    display: inline-block;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1px 5px;
+}
+
+.form-control:focus {
+    background-image: linear-gradient(to top, #4284f4 1px, rgba(210, 210, 210, 0) 1px), linear-gradient(to top, #4284f4 1px, rgba(210, 210, 210, 0) 1px);
+}

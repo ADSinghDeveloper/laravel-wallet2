@@ -18,6 +18,6 @@ class PaymentModes extends Model
      */
     public function transaction()
     {
-        return $this->hasOne('App\Transactions');
+        return $this->hasOne('App\Models\Transactions');
     }
 }

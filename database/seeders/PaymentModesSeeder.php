@@ -14,7 +14,7 @@ class PaymentModesSeeder extends Seeder
      */
     public function run()
     {
-        $paymentModes = array('Net Banking','Cash','Debit Card','Credit Card');
+        $paymentModes = array('Net Banking','Cash','Debit Card','Credit Card','Transfer');
         foreach($paymentModes as $paymentMode){
             DB::table('payment_modes')->insert([
                 'name' => $paymentMode,
