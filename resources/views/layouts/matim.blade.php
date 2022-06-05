@@ -168,7 +168,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
-              @include('alerts')
+              @include('layouts.alerts')
               @yield('content')
             </div>
           </div>

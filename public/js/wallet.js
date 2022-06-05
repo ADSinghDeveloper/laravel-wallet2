@@ -175,6 +175,7 @@ $(document).ready(function () {
 
     $("#print_pdf_btn").on('click', function(e){
         e.preventDefault();
-        $("#print_pdf").submit();
+        window.print();
+        // $("#print_pdf").submit();
     });
 });
