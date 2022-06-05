@@ -45,7 +45,7 @@ class TransactionController extends Controller
         $from = ($request->has(['from']))? $request->from : date('Y/m/d', strtotime('-1 week'));
         $till = ($request->has(['till']))? $request->till : date('Y/m/d');
         $search = ($request->has(['search']))? $request->search : '';
-        $fids = ($request->has(['filter']))? $request->filter : '';
+        $fid = ($request->has(['filter']))? $request->filter : 0;
         $allTrans = ($request->has(['all_trans']))? $request->all_trans : 0;
         $activeAccountsOnly = ($request->has(['active_accounts_only']))? $request->active_accounts_only : 0;
 
@@ -77,7 +77,7 @@ class TransactionController extends Controller
             $transactions->whereIn('account_id',$aids);
         }
 
-        if($filter = Filters::user()->find($fids)){
+        if($fid > 0 && $filter = Filters::user()->find($fid)){
             $filterValues = json_decode($filter->value,true);
             $cids = $filterValues['cids'];
             $mods = $filterValues['mods'];
