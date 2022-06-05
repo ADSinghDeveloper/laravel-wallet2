@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class ColorsSeeder extends Seeder
 {
     /**
-     * Run the Colors seeds.
+     * Run the database seeds.
      *
      * @return void
      */
