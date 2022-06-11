@@ -38,7 +38,7 @@
         @foreach($dashboardFilter as $aid => $filter)
     <div class="col-lg-3 col-md-4 col-sm-6 editable">
         <a href="{{ route('filter_edit',[$fid])}}" title="Edit {{ $filter['filterName'] }} filter" class="edit"><span class="badge simple" style="color: {{ $filter['accColor'] }};"><i class="material-icons pull-right">edit</i></span></a>
-        <a href="{{ route('transaction_view',[$aid, 'filter' => $fid, 'all_trans' => 1])}}" title="View {{ $filter['filterName'] }} filter on {{ $filter['accName'] }} account">
+        <a href="{{ route('transaction_view',[$aid, 'filter' => $fid])}}" title="View {{ $filter['filterName'] }} filter on {{ $filter['accName'] }} account">
         <div class="card card-filter text-center">
             <div class="card-header card-header-primary" style="background: {{ $filter['accColor'] }};">
                 <h4 class="card-title text-left">{{ $filter['filterName'] }}<i class="material-icons pull-right">filter_list</i></h4>

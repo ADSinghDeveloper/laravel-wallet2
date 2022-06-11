@@ -98,12 +98,6 @@
             </a>
           </li>
           @endif
-          <li class="nav-item @if(Route::currentRouteName() == 'import') active @endif">
-            <a class="nav-link" href="{{ route('import') }}">
-              <i class="material-icons">get_app</i>
-              <p>Import</p>
-            </a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="https://www.linkedin.com/in/amandeeps20/" target="_blank">
               &copy;
@@ -146,9 +140,11 @@
                   <p class="d-lg-none d-md-block">My Profile</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="{{ route('profile') }}">{{ Auth::user()->name }}</a>
+                  <a class="dropdown-item @if(Route::currentRouteName() == 'profile') active @endif" href="{{ route('profile') }}">{{ Auth::user()->name }}</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{{ route('transactions_export') }}">Export</a>
+                  <a class="dropdown-item @if(Route::currentRouteName() == 'import') active @endif" href="{{ route('import') }}">Import</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{{ route('transactions_export') }}">Export All</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#delallPopup">Delete All</a>
                   <div class="dropdown-divider"></div>

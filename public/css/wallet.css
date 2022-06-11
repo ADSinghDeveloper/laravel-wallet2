@@ -197,7 +197,8 @@ div[data-toggle="modal"] input[type="text"] { position: absolute; left: 0; z-ind
 }
 
 /* Theme color - Start */
-.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active,
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item.active,
+.dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active,
 .card .card-header-primary .card-icon,
 .card .card-header-primary .card-text,
 .card .card-header-primary:not(.card-header-icon):not(.card-header-text),

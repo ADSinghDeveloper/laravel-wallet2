@@ -45,9 +45,7 @@ class DashboardController extends Controller
         				$tempArr2['accCurr'] = $account->currency->code;
 
 		        		$filterValues = array_merge(['aids' => [$aid]],json_decode($filter->value,true));
-		        		$filterAmount = Transactions::totalAmount($filterValues);
-		        		$tempArr2['filterAmount'] = $filterAmount;
-
+		                $tempArr2['filterAmount'] = Transactions::totalAmount($filterValues);
         				$tempArr[$aid] =$tempArr2; 
         			}
         		}
