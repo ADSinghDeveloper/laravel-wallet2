@@ -3,7 +3,7 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <i class="material-icons">close</i>
         </button>
-        <i class="material-icons">done</i>{{ session('success') }}
+        <i class="material-icons">done</i>{!! session('success') !!}
     </div>
 @endif
 @if (session('warning'))
@@ -11,7 +11,7 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <i class="material-icons">close</i>
         </button>
-        <i class="material-icons">warning</i>{{ session('warning') }}
+        <i class="material-icons">warning</i>{!! session('warning') !!}
     </div>
 @endif
 @if (session('error'))
@@ -19,7 +19,7 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <i class="material-icons">close</i>
         </button>
-        <i class="material-icons">error</i>{{ session('error') }}
+        <i class="material-icons">error</i>{!! session('error') !!}
     </div>
 @endif
 @if ($errors->any())
@@ -28,7 +28,7 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <i class="material-icons">close</i>
         </button>
-        <i class="material-icons">error</i>{{ $error }}
+        <i class="material-icons">error</i>{!! $error !!}
     </div>
     @endforeach
 @endif
