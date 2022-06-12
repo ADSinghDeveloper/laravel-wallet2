@@ -144,7 +144,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item @if(Route::currentRouteName() == 'import') active @endif" href="{{ route('import') }}">Import</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{{ route('transactions_export') }}">Export All</a>
+                  <a class="dropdown-item" href="#" id="export_all_btn">Export All</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#delallPopup">Delete All</a>
                   <div class="dropdown-divider"></div>
@@ -174,6 +174,10 @@
   </div>
 
 @if(!Auth::guest())
+<form class="hide" id="export_all" method="post" target="_blank" action="{{ route('transactions_export') }}">
+    @csrf
+</form>
+
   @include('layouts.delete-model')
 @endif
 
@@ -220,7 +224,7 @@
   <script src="{{ url('matim/js/material-dashboard.js?v=2.1.1') }}" type="text/javascript"></script>
   <script src="{{ url('matim/js/material-kit.js?v=2.0.4') }}" type="text/javascript"></script>
   <script src="{{ url('js/jquery.autocomplete.js') }}"></script>
-  <script src="{{ url('js/wallet.js') }}"></script>
+  <script src="{{ url('js/wallet.js') }}?20220612"></script>
   <script>
     $(document).ready(function() {
       //init DateTimePickers

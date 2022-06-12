@@ -62,7 +62,7 @@ Route::get('/transaction/add/', 'TransactionController@add')->name('transaction_
 Route::get('/transaction/edit/{id}', 'TransactionController@add')->where('id', '[0-9]+')->name('transaction_edit');
 Route::post('/transaction/save/', 'TransactionController@save')->name('transaction_save');
 Route::delete('/transaction/del', 'TransactionController@del')->name('transaction_del');
-Route::get('/transactions/export', 'TransactionController@export')->name('transactions_export');
+Route::post('/transactions/export', 'TransactionController@export')->name('transactions_export');
 Route::post('/transactions/delall', 'TransactionController@delall')->name('del_all');
 
 Route::get('/profile', 'ProfileController@edit')->name('profile');

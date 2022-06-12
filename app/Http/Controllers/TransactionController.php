@@ -275,7 +275,7 @@ class TransactionController extends Controller
     /**
      * Export all transactions data.
      */
-    public function export()
+    public function export(Request $request)
     {
         $headers = array(
             "Content-type" => "text/csv",
@@ -285,7 +285,13 @@ class TransactionController extends Controller
             "Expires" => "0"
         );
 
-        $transactions = Transactions::user()->orderBy('date_time','desc')->get();
+        $transactionsClass = Transactions::user()->orderBy('date_time','asc');
+
+        if ($request->has(['tids'])) {
+            $transactions = $transactionsClass->find(explode(',', $request->tids));
+        }else{
+            $transactions = $transactionsClass->get();
+        }
 
         $columns = array('Category', 'Note', 'Account', 'Payment_Type', 'Amount', 'Type', 'Date');
 

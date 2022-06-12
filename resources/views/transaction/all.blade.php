@@ -52,6 +52,7 @@
                     </div>
                     @if(count($transactions) > 0)
                     <a href="#" class="badge badge-dark filter-badge" alt="Print PDF" title="Print PDF" id="print_pdf_btn" style="background-color: #d93025;"><i class="material-icons">picture_as_pdf</i></a>
+                    <a href="#" class="badge badge-dark filter-badge" alt="Export CSV" title="Export CSV" id="export_csv_btn"><i class="material-icons">download</i></a>
                     @endif
                     @if($filteredCats || $filteredMods || $type || $search || $selectedFilter)
                     <a href="{{ route('transaction_view',array_merge([($account->id != ''? $account->id : '')],(old('all_trans')?['all_trans' => old('all_trans')]: []),(!old('all_trans') && ($from || $till)?['from' => $from, 'till' => $till] : []))) }}" class="pull-right close"><span class="close"><i class="material-icons">close</i></span></a>
@@ -194,6 +195,10 @@
     </div>
   </div>
 </div>
+<form class="hide" id="trans_action" method="post" target="_blank" action="{{ route('transactions_export') }}">
+    <input type="hidden" name="tids" value="{{ $transactions->pluck('id')->implode(',') }}">
+    @csrf
+</form>
 <form class="hide" id="print_pdf">
     @if(is_array(old('cids')))
         @foreach(old('cids') as $cids)

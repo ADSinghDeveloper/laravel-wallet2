@@ -178,4 +178,14 @@ $(document).ready(function () {
         window.print();
         // $("#print_pdf").submit();
     });
+
+    $("#export_csv_btn").on('click', function(e){
+        e.preventDefault();
+        $("#trans_action").submit();
+    });
+
+    $("#export_all_btn").on('click', function(e){
+        e.preventDefault();
+        $("#export_all").submit();
+    });
 });
