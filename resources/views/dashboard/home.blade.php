@@ -3,7 +3,7 @@
 @section('pageTitle', 'Dashboard')
 
 @section('content')
-
+<div class="container-fluid">
 <div class="row block">
     <div class="col-lg-12">
         <h3 class="title"><a href="{{ route('accounts') }}">Accounts</a><a href="{{ route('account_add')}}" class="pull-right" role="button"><i class="material-icons">add</i></a></h3>
@@ -130,7 +130,7 @@
         </table>
     </div>
 </div>
-
+</div>
 <div class="btn-fixed hide">
     <a href="{{ route('transaction_add')}}" class="btn btn-primary btn-round btn-fab" role="button"><i class="material-icons">add</i></a>
 </div>

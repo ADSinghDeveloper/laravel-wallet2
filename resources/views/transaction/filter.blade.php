@@ -12,7 +12,7 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                               <div class="bmd-form-group">
                                 <label for="from">From</label>
                                   <div class='input-group'>
@@ -20,7 +20,7 @@
                                   </div>
                               </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                               <div class="bmd-form-group">
                                 <label for="till">To</label>
                                   <div class='input-group'>

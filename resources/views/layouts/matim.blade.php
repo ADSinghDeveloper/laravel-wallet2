@@ -18,7 +18,7 @@
     <link href="{{ url('matim/css/material-kit.css?v=2.0.4') }}" rel="stylesheet" />
     <link href="{{ url('matim/css/material-dashboard.css?v=2.1.1') }}" rel="stylesheet" />
 
-    <link href="{{ url('css/wallet.css') }}" rel="stylesheet" />
+    <link href="{{ url('css/wallet.css') }}?20220613" rel="stylesheet" />
     <script type="text/javascript">var notes = [];</script>
 </head>
 <body>
@@ -161,12 +161,10 @@
       @endif
       <!-- End Navbar -->
       <div class="content @if(Auth::guest()) col-lg-12 @endif">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              @include('layouts.alerts')
-              @yield('content')
-            </div>
+        <div class="row">
+          <div class="col-lg-12">
+            @include('layouts.alerts')
+            @yield('content')
           </div>
         </div>
       </div>

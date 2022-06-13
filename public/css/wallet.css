@@ -116,6 +116,7 @@ form button.btn i.material-icons { font-size: 1.8rem; }
 .accounts .select-value span { min-width: 140px; }
 .multiple .select-value { cursor: pointer; margin-top: 0.2rem; margin-right: 0.5rem; }
 .multiple .select-value input{ display: none; }
+.multiple .select-value:last-child { margin-right: 0; }
 div[data-toggle="modal"] > label { vertical-align: top; }
 .select-block, .select-block label { margin: 0; }
 .select-block > *, .select-block p { margin-left: 10px !important; cursor: pointer; }
@@ -194,6 +195,8 @@ div[data-toggle="modal"] input[type="text"] { position: absolute; left: 0; z-ind
 }
 @media (max-width: 560px){
 	.wrapper:not(.print) .payment-col { display: none; }
+    .main-panel > .content { padding-top: 0px; }
+    .text-center .btn { margin-right: 0; }
 }
 
 /* Theme color - Start */
