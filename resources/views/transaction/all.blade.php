@@ -89,7 +89,7 @@
                             <div class="payment-note"><small><i class="material-icons">payment</i>{{ $transaction->paymentmode->name }}</small></div>
                         </td>
                         <td class="td-actions text-right">
-                            <div class="transc_amt amount @if($transaction->amount >= 0) inc @else exp @endif">{!! Helper::amountFormatting($transaction->amount, $transaction->account->currency->code) !!}</div>
+                            <div class="transc_amt amount text-nowrap @if($transaction->amount >= 0) inc @else exp @endif">{!! Helper::amountFormatting($transaction->amount, $transaction->account->currency->code) !!}</div>
                             <div>
                                 @php
                                     $balAmt -= $transaction->amount;
