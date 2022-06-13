@@ -127,7 +127,7 @@ small { font-size: 0.8rem; }
 .small { opacity: 0.8; }
 .card .card-header .card-title { text-transform: uppercase; margin-bottom: 0; }
 .card .card-header .card-title small { color: #fff; }
-.table-responsive { padding: 0 5px 5px 5px; }
+.padding05, .table-responsive { padding: 0 5px 5px 5px; }
 .sidebar .logo { padding: 10px 8px; }
 .navbar h4 { margin-bottom: 0; }
 .acc { font-size: 13px; font-weight: 500; text-transform: uppercase; }
@@ -179,7 +179,6 @@ div[data-toggle="modal"] input[type="text"] { position: absolute; left: 0; z-ind
 .text-2 { font-size: 15px; font-weight: 400; background: #eee; }
 .main-panel > .content { padding-top: 10px; }
 .table tr:last-child th, .table tr:last-child td { border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
-.padding05 { padding: 0 5px; }
 
 .print .card [class*="card-header-"]:not(.card-header-icon):not(.card-header-text):not(.card-header-image) { margin-top: 0; top: -20px; }
 .print .card .card-body { padding-top: 0; }
@@ -197,6 +196,7 @@ div[data-toggle="modal"] input[type="text"] { position: absolute; left: 0; z-ind
 	.wrapper:not(.print) .payment-col { display: none; }
     .main-panel > .content { padding-top: 0px; }
     .text-center .btn { margin-right: 0; }
+    .padding05, .table-responsive { padding: 0; }
 }
 
 /* Theme color - Start */
