@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Resources\ColorResource;
+use App\Models\Colors;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +28,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     });
 
     Route::patch('save_profile', [AuthController::class, 'save_auth_profile']);
+    Route::get('colors', function(Request $request) {
+        return ColorResource::collection(Colors::all());
+    });
 
     // API route for logout user
     Route::post('logout', [AuthController::class, 'logout']);
