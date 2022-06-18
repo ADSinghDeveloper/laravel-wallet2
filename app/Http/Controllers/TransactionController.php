@@ -113,8 +113,11 @@ class TransactionController extends Controller
 
         if($search != ''){
             $transactions->where(function ($query) use ($search) {
-                $query->Where('title', 'like', '%'.$search.'%')
-                      ->orWhere('amount', '=', $search);
+                if(is_numeric($search)){
+                    $query->Where('amount', '=', $search);
+                }else{
+                    $query->Where('title', 'like', '%'.$search.'%');
+                }
             });
             $minRecordsFlag = false;
         }
