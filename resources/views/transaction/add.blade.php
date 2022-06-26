@@ -91,7 +91,7 @@
                 <div class="col-lg-12 col-md-12">
                   <div class="form-group">
                     <label for="type">Type</label>
-                    <div class="togglebutton" style="margin-top: 10px;">
+                    <div class="togglebutton" style="margin: 10px 0 0 10px; display: inline-block;">
                       <label>
                         <span class="exp">Expense</span>
                         <input type="checkbox" id="trans-type" data-exp="1" data-inc="2" @if(old('type') == 2 || ($transaction != '' && $transaction->type == 2)) checked="checked" @endif  @if(old('type')) value="{{ old('type') }}" @elseif($transaction != '') value="{{ $transaction->type }}" @endif>
