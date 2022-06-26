@@ -58,7 +58,6 @@ select.form-control:read-only.update_color { background-image: none; }
 .card.bg-primary,
 .card.card-rotate.bg-primary .front,
 .card.card-rotate.bg-primary .back { background: #9c27b0; }
-.card .togglebutton { margin-top: 10px; }
 .type-btn.inc.active, .type-btn.inc:hover, .togglebutton:not(.disabled) label input[type=checkbox]:checked+.toggle { background: green; }
 .type-btn.exp.active, .type-btn.exp:hover, .togglebutton:not(.disabled) label .toggle { background: red; }
 .togglebutton:not(.disabled) label .toggle:after { border-color: red; }

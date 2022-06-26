@@ -56,7 +56,25 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-4 col-md-4">
+                  <div class="bmd-form-group">
+                    <label for="type" class="pull-left">Type</label>
+                    <div class="togglebutton" style="margin-left: 10px; display: inline-block;">
+                      <label>
+                        <span class="exp">Expense</span>
+                        <input type="checkbox" id="trans-type" data-exp="1" data-inc="2" @if(old('type') == 2 || ($transaction != '' && $transaction->type == 2)) checked="checked" @endif  @if(old('type')) value="{{ old('type') }}" @elseif($transaction != '') value="{{ $transaction->type }}" @endif>
+                        <span class="toggle"></span>
+                        <span class="inc">Income</span>
+                      </label>
+                    </div>
+                    <div class="hide">
+                      <button type="button" class="btn btn-round btn-fab btn-sm type-btn inc @if(old('type') == 2 || ($transaction != '' && $transaction->type == 2)) active @endif" data-value="2"><i class="material-icons">add</i></button>
+                      <button type="button" class="btn btn-round btn-fab btn-sm type-btn exp @if(old('type') == 1 || ($transaction != '' && $transaction->type == 1)) active @endif" data-value="1"><i class="material-icons">remove</i></button>
+                    </div>
+                      <input type="hidden" id="type" required @if(old('type')) value="{{ old('type') }}" @elseif($transaction != '') value="{{ $transaction->type }}" @endif name="type">
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
                   <div class="bmd-form-group" data-toggle="modal" data-target="#accountPopup">
                     <label for="account">Account</label>
                     <div class="colors select-block accounts" id="selected_account">
@@ -71,7 +89,7 @@
                     <input type="text" id="account_id" name="account_id" required value="@if(old('account_id')){{ old('account_id') }}@elseif($curr_account != ''){{ $curr_account->id }}@elseif($transaction != ''){{ $transaction->account_id }}@endif" />
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-4 col-md-4">
                   <div class="bmd-form-group" data-toggle="modal" data-target="#categoryPopup">
                     <label>Category</label>
                     <div class="colors select-block categories" id="selected_category">
@@ -84,26 +102,6 @@
                       @endif
                     </div>
                     <input type="text" id="category_id" name="category_id" required @if(old('category_id')) value="{{ old('category_id') }}" @elseif($transaction != '') value="{{ $transaction->category_id }}" @endif />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
-                    <label for="type">Type</label>
-                    <div class="togglebutton" style="margin: 10px 0 0 10px; display: inline-block;">
-                      <label>
-                        <span class="exp">Expense</span>
-                        <input type="checkbox" id="trans-type" data-exp="1" data-inc="2" @if(old('type') == 2 || ($transaction != '' && $transaction->type == 2)) checked="checked" @endif  @if(old('type')) value="{{ old('type') }}" @elseif($transaction != '') value="{{ $transaction->type }}" @endif>
-                        <span class="toggle"></span>
-                        <span class="inc">Income</span>
-                      </label>
-                    </div>
-                    <div class="hide">
-                      <button type="button" class="btn btn-round btn-fab btn-sm type-btn inc @if(old('type') == 2 || ($transaction != '' && $transaction->type == 2)) active @endif" data-value="2"><i class="material-icons">add</i></button>
-                      <button type="button" class="btn btn-round btn-fab btn-sm type-btn exp @if(old('type') == 1 || ($transaction != '' && $transaction->type == 1)) active @endif" data-value="1"><i class="material-icons">remove</i></button>
-                    </div>
-                      <input type="hidden" id="type" required @if(old('type')) value="{{ old('type') }}" @elseif($transaction != '') value="{{ $transaction->type }}" @endif name="type">
                   </div>
                 </div>
               </div>
